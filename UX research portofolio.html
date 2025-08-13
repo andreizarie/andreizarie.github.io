@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UX Research Portfolio – Case Studies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+   :root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --link: #2563eb;
+  --border: #e5e7eb;
+  --ring: rgba(37, 99, 235, 0.15);
+  --shadow: 0 6px 14px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.04);
+
+  --radius: 14px;
+  --maxw: 1100px;
+  --space-1: .4rem;
+  --space-2: .6rem;
+  --space-3: .85rem;
+  --space-4: 1.2rem;
+  --space-5: 1.6rem;
+  --space-6: 2rem;
+
+  --h1: clamp(1.5rem, 2vw, 2rem);
+  --h2: clamp(1.15rem, 1.5vw, 1.35rem);
+  --h3: clamp(.95rem, 1.1vw, 1.05rem);
+  --text-size: clamp(.9rem, 1vw, .95rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0e14;
+    --surface: #0f131b;
+    --text: #e5e7eb;
+    --muted: #9aa4b2;
+    --link: #60a5fa;
+    --border: #1f2937;
+    --ring: rgba(96, 165, 250, 0.22);
+    --shadow: 0 8px 18px rgba(0,0,0,.35), 0 1px 4px rgba(0,0,0,.25);
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--text-size)/1.5 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--space-3); }
+
+header.site { padding: var(--space-5) 0 var(--space-3); }
+.badge {
+  display: inline-flex; align-items: center; gap: .4ch;
+  padding: .15rem .45rem; border-radius: 999px; font-size: .8rem;
+  color: var(--muted); border: 1px solid var(--border);
+}
+
+h1 { font-size: var(--h1); margin: var(--space-1) 0 var(--space-2); }
+.lead { color: var(--muted); max-width: 70ch; font-size: .95rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 800px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-3);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover { transform: translateY(-1px); }
+
+article h2 { margin: 0 0 var(--space-1); font-size: var(--h2); }
+article h3 {
+  margin: var(--space-2) 0 var(--space-1);
+  font-size: var(--h3);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+ul, ol { padding-left: 1rem; margin: .2rem 0 .5rem; }
+li + li { margin-top: .25rem; }
+
+footer.site {
+  margin-top: var(--space-5);
+  padding: var(--space-4) 0;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+
+    /* ---------- Print ---------- */
+    @media print {
+      header.site, footer.site { display: none; }
+      .grid { display: block; }
+      .card { break-inside: avoid; box-shadow: none; border-color: #ddd; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site wrap">
+    <span class="badge">UX Research Portfolio</span>
+    <h1>Case Studies</h1>
+    <p class="lead">
+      Research-focused case studies showing process, methods, insights, and impact.
+      <!-- Optional quick links: add your contact/CV URLs -->
+      <!-- <br> <a href="#">Download UX Research CV</a> · <a href="#">LinkedIn</a> · <a href="#">Email</a> -->
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+
+      <!-- Case Study 1 -->
+      <article class="card">
+        <h2>Creating Inclusive Emotion Recognition Materials</h2>
+        <div class="meta">Role: <strong>Lead Researcher</strong> · End-to-end design to validation</div>
+
+        <h3>Context &amp; Goal</h3>
+        <p>Develop a set of body and face emotion recognition stimuli that are representative, inclusive, and valid for both autistic and non-autistic audiences. Existing materials lacked diversity in neurotype, gender, and age, limiting ecological validity.</p>
+
+        <h3>Methods</h3>
+        <ul>
+          <li>Stakeholder interviews with autistic community representatives and psychologists</li>
+          <li>Iterative testing with pilot groups</li>
+          <li>Filming, editing, and psychometric validation of visual stimuli</li>
+        </ul>
+
+        <h3>Process</h3>
+        <ol>
+          <li>Conducted needs assessment to identify representation gaps</li>
+          <li>Recruited 16 diverse actors (half autistic, gender-balanced, age-diverse, including non-binary identities)</li>
+          <li>Produced both static and dynamic emotion expressions</li>
+          <li>Ran multiple validation studies (~200 participants per round) with statistical analysis in R and SPSS</li>
+        </ol>
+
+        <h3>Findings &amp; Insights</h3>
+        <ul>
+          <li>Inclusion of autistic actors increased perceived relevance for neurodiverse users</li>
+          <li>Dynamic stimuli improved recognition accuracy for certain emotions</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Open-access resource adopted by other researchers and practitioners</li>
+          <li>Secured £5k competitive funding (Impact Accelerator Fund)</li>
+        </ul>
+      </article>
+
+      <!-- Case Study 2 -->
+      <article class="card">
+        <h2>Evaluating Educational Resources in Chaotic, Real-World Environments</h2>
+        <div class="meta">Role: <strong>Lead UX Researcher</strong> · Field testing &amp; evaluation</div>
+
+        <h3>Context &amp; Goal</h3>
+        <p>Assess how children and parents engaged with cognitive testing activities during <em>Summer Scientist Week</em>, a busy public science event. The challenge was to maintain usability and engagement in a high-distraction environment.</p>
+
+        <h3>Methods</h3>
+        <ul>
+          <li>Contextual inquiry in event space</li>
+          <li>Direct observation and behaviour logging</li>
+          <li>Post-activity surveys with parents and children</li>
+        </ul>
+
+        <h3>Process</h3>
+        <ol>
+          <li>Designed a child-friendly cognitive test with visual prompts and timed responses</li>
+          <li>Managed and trained research assistants to ensure consistent data collection</li>
+          <li>Collected and analysed data across three years to track trends</li>
+        </ol>
+
+        <h3>Findings &amp; Insights</h3>
+        <ul>
+          <li>Simplified instructions and visual cues boosted engagement in children under 8</li>
+          <li>Queue length and noise levels directly impacted performance for younger participants</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Testing station layout redesigned based on findings</li>
+          <li>Increased completion rates and parental satisfaction year-on-year</li>
+        </ul>
+      </article>
+
+      <!-- Case Study 3 -->
+      <article class="card">
+        <h2>Improving Survey Data Quality in Educational Settings</h2>
+        <div class="meta">Role: <strong>Lead Researcher</strong> · Survey design &amp; iteration</div>
+
+        <h3>Context &amp; Goal</h3>
+        <p>Improve data quality and completion rates for school-administered surveys in emotion recognition research. Initial completion was low due to unclear instructions and survey fatigue.</p>
+
+        <h3>Methods</h3>
+        <ul>
+          <li>Think-aloud usability testing with teachers</li>
+          <li>Quantitative tracking of completion and error rates</li>
+          <li>Iterative survey refinement in Qualtrics</li>
+        </ul>
+
+        <h3>Process</h3>
+        <ol>
+          <li>Identified pain points through think-aloud sessions</li>
+          <li>Reduced redundancy and restructured question flow</li>
+          <li>Added progress bars, chunked questions, and embedded micro-instructions</li>
+        </ol>
+
+        <h3>Findings &amp; Insights</h3>
+        <ul>
+          <li>Completion rates increased by 25%</li>
+          <li>Error rates dropped significantly on critical questions</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Positive feedback from school staff on usability</li>
+          <li>Survey design became the departmental standard for related projects</li>
+        </ul>
+      </article>
+
+      <!-- Case Study 4 -->
+      <article class="card">
+        <h2>Optimising Online Statistical Learning Resources in a Constrained Platform</h2>
+        <div class="meta">Role: <strong>Digital Learning &amp; UX Researcher</strong> · Analytics &amp; optimisation</div>
+
+        <h3>Context &amp; Goal</h3>
+        <p>Enhance engagement and usability of R programming learning materials on the Maths and Stats Help (MASH) website, hosted on <strong>LibGuides</strong> — a fixed-template platform with major design constraints.</p>
+
+        <h3>Methods</h3>
+        <ul>
+          <li>Web analytics review (page views, bounce rates, time-on-page)</li>
+          <li>User navigation path analysis</li>
+          <li>Content restructuring and iterative testing</li>
+        </ul>
+
+        <h3>Process</h3>
+        <ol>
+          <li>Analysed baseline metrics to identify low-engagement sections</li>
+          <li>Created new R guides with code examples, downloadable resources, and step-by-step explanations</li>
+          <li>Improved navigation and content hierarchy within LibGuides’ limitations through internal linking and clear section headings</li>
+          <li>Monitored post-launch engagement and refined content based on behaviour patterns</li>
+        </ol>
+
+        <h3>Findings &amp; Insights</h3>
+        <ul>
+          <li>Example-driven pages had higher engagement and lower bounce rates</li>
+          <li>Strategic internal linking reduced navigation dead ends</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul>
+          <li>Increased time-on-page by over 40% for core R guide sections</li>
+          <li>R materials became one of the most visited parts of the MASH site</li>
+          <li>Provided a reusable template for other statistical learning resources</li>
+        </ul>
+
+        <p><small>Note: Work executed within LibGuides’ fixed template; no template changes were possible.</small></p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      © 2025 • UX Research case studies
+    </div>
+  </footer>
+
+</body>
+</html>
