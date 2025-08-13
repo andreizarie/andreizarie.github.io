@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    /* ---------- Design tokens ---------- */
    :root {
   --bg: #ffffff;
   --surface: #ffffff;
@@ -109,6 +110,13 @@ footer.site {
 }
 
 
+    /* ---------- Focus styles for a11y ---------- */
+    :where(a, button, summary, .card):focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: 2px;
+      border-radius: calc(var(--radius) - 2px);
+    }
+
     /* ---------- Print ---------- */
     @media print {
       header.site, footer.site { display: none; }
@@ -121,7 +129,7 @@ footer.site {
 <body>
 
   <header class="site wrap">
-   
+    <span class="badge">UX Research Portfolio</span>
     <h1>Case Studies</h1>
     <p class="lead">
       Research-focused case studies showing process, methods, insights, and impact.
@@ -132,7 +140,7 @@ footer.site {
 
   <main class="wrap">
     <section class="grid">
-<span class="badge">UX Research Portfolio</span>
+
       <!-- Case Study 1 -->
       <article class="card">
         <h2>Creating Inclusive Emotion Recognition Materials</h2>
