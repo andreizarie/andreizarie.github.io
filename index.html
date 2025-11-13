@@ -127,3 +127,48 @@
 
     .btn:hover {
       background: #1e4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: 2px;
+    }
+
+    footer.site {
+      margin-top: 4rem;
+      padding: 2rem 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site wrap">
+    <h1>Andrei Zărie</h1>
+
+    <p class="lead">
+      Researcher and statistics specialist with expertise in user research, quantitative and qualitative methods,
+      and digital resource development.
+    </p>
+
+    <!-- Vertical button list -->
+    <div class="btn-list">
+      <a href="CV.html" class="btn">CV</a>
+      <a href="UX research portfolio.html" class="btn">UX Portfolio</a>
+      <a href="written-work.html" class="btn">Written Work</a>
+      <a href="https://ipstore.lincoln.ac.uk/product/fable" class="btn">Video Work</a>
+    </div>
+  </header>
+
+  <footer class="site">
+    © 2025 • Andrei Zărie
+  </footer>
+
+</body>
+</html>
